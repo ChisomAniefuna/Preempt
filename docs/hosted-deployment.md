@@ -8,7 +8,7 @@ Deployed on 4 November 2026.
 - Supabase API: https://jjvbmxdzoeqcrhhbazhy.supabase.co
 - Region: London (eu-west-2).
 
-The frontend was uploaded directly from `web/`. This folder has no Git repository, so automatic Git deployments are not configured. Vercel uses Next.js and Node 22, with the hosted Supabase public environment variables configured.
+The source is hosted at https://github.com/ChisomAniefuna/Preempt. The local `origin` points to that repository, and Vercel is connected to its `main` branch for automatic production deployments. Vercel builds the `web/` directory using Next.js and Node 22, with the hosted Supabase public environment variables configured. The initial deployment was uploaded directly; Git deployments were connected on 5 November 2026.
 
 All four original migrations plus the function permissions migration are applied. All five Edge Functions are deployed. Realtime is configured. The `worker-tick` Cron job is deliberately inactive pending provider configuration. Vault contains the project URL, public anon key and matching generated cron secret.
 

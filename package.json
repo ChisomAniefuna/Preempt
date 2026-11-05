@@ -1,0 +1,13 @@
+{
+  "name": "preempt",
+  "version": "0.1.0",
+  "description": "AI agent that fixes late or failed orders with the buyer before they open a PayPal dispute.",
+  "type": "module",
+  "engines": { "node": ">=22.13" },
+  "scripts": {
+    "start": "node --disable-warning=ExperimentalWarning src/server.js",
+    "sandbox-check": "node --disable-warning=ExperimentalWarning scripts/sandbox-check.js",
+    "demo": "node --disable-warning=ExperimentalWarning scripts/demo.js",
+    "test": "node --disable-warning=ExperimentalWarning --test \"test/*.test.js\""
+  }
+}

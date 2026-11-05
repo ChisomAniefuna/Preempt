@@ -1,0 +1,4 @@
+{
+  "nodeModulesDir": "none",
+  "tasks": { "test": "deno test --allow-env tests/", "check": "deno check functions/*/index.ts functions/_shared/*.ts functions/_shared/*/*.ts" }
+}

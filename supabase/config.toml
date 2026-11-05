@@ -1,0 +1,36 @@
+project_id = "preempt"
+
+[api]
+enabled = true
+port = 54321
+
+[db]
+port = 54322
+
+[studio]
+enabled = true
+port = 54323
+
+[auth]
+enabled = true
+site_url = "http://127.0.0.1:3000"
+
+[edge_runtime]
+enabled = true
+policy = "per_worker"
+
+# Public endpoints are authorised by something other than a Supabase JWT.
+[functions.paypal-webhook]
+verify_jwt = false   # PayPal signature
+
+[functions.worker-tick]
+verify_jwt = false   # x-cron-secret header
+
+[functions.buyer]
+verify_jwt = false   # signed buyer token
+
+[functions.offers]
+verify_jwt = true    # merchant JWT
+
+[functions.demo]
+verify_jwt = true    # merchant JWT
